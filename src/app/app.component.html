@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="top">
+    <h1 class="h1">Chess</h1>
+    <button  class="btn btn-primary"  (click)="toggleButton()">{{darkColor ? "Light theme" : "Dark theme"}}</button>
+  </div>
+
+ <div class="d-flex justify-content-center">
+   <table [class.white]="!darkColor" [class.black]="darkColor" class="chessboard">
+     <tr *ngFor="let row of chessboard" >
+       <td *ngFor="let element of row" class="square">{{element}}</td>
+     </tr>
+   </table>
+
+ </div>
+</div>
